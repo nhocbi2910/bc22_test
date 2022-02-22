@@ -1,0 +1,459 @@
+/* RESET TAT CA VE 0 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  /* su dung font chu theo mau (nho xem ben html) */
+}
+
+header {
+  padding: 1.2rem 0;
+  /* cach giua the header tren duoi: 1.2rem 30px, trai phai la 0px */
+  border-bottom: 1px solid black;
+  /* 1px la do day cua gach ngang, solid la gach ngang, black la mau */
+  position: absolute;
+  width: 100%;
+}
+
+.header__content {
+  display: flex;
+  /* lam cho tat ca cac the trong class cung 1 hang */
+  justify-content: space-around;
+  /* gian cach hang */
+  align-items: center;
+  /* canh giua hang ngang va chieu doc = logo */
+  /* justify-content va align-items chi di chung voi display: flex */
+}
+
+.logo {
+  text-decoration: none;
+}
+/* bo gach duoi the span */
+
+.logo span {
+  font-size: 30px;
+  /* don vi (rem) font-size: 1rem = 18px */
+}
+
+.menu ul {
+  list-style: none;
+  /* bo dau cham trong the ul */
+}
+
+.menu ul li {
+  display: inline;
+  /* lam cho cac the block thanh the inline (len cung 1 dong) */
+  margin-right: 25px;
+  /* day the li qua ben phai */
+}
+
+.menu ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  /* lam tat ca viet hoa */
+  transition: all 0.5s;
+  /* viec thay doi mau sac hover se do tre 0.5s */
+}
+
+.menu ul li.active a {
+  /* li.active viet lien de phan biet the a co' class active moi co hieu ung mau do  */
+  color: red;
+}
+
+.menu ul li:hover a {
+  /* li:hover la tro chuot vo the a nao thi the do hien mau len */
+  color: red;
+}
+
+#carousel {
+  background-image: url(./../img//home_slider.jpg);
+  height: 800px;
+  background-position: center;
+  /* canh hinh chinh giua */
+  background-size: cover;
+  /* height+background tren di chung voi background-img */
+  color: #fff;
+  display: flex;
+  /* se cho len 1 dong */
+  align-items: center;
+  /* canh giua theo chieu ngang theo khung hinh*/
+  justify-content: center;
+  /* canh giua theo chieu doc theo khung hinh (nho doc o tren) */
+}
+
+.carousel__content {
+  text-align: center;
+}
+
+.carousel__content p {
+  font-size: 30px;
+  text-align: center;
+}
+
+.carousel__content h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+.carousel__content button {
+  background-color: #e62b4a;
+  border: none;
+  color: #ffffff66;
+  padding: 0.7rem 1.6rem;
+  border: 1px solid #e62b4a;
+  margin-top: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  /* khi chi vao Read more se thay doi hinh ban tay */
+  transition: 0.5s;
+}
+
+.carousel__content button:hover {
+  background-color: #af2239;
+}
+
+#service {
+  background-color: black;
+  color: white;
+  padding: 7rem 0;
+  text-align: center;
+}
+
+.service__content {
+  width: 75%;
+  margin: 0 auto;
+  /* tao khoang trong 2 ben */
+}
+
+.service__title p:first-of-type {
+  color: #e62b4a;
+  font-size: 0.8rem;
+}
+
+.service__title h1 {
+  font-size: 2.5rem;
+}
+
+.service__title p:last-of-type {
+  color: gray;
+}
+
+.slider__content .item {
+  background-color: white;
+  color: black;
+  margin: 10px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  /* tao vi tri cho thanh ben tay phai icon */
+}
+
+.slider__content .item::after {
+  content: "";
+  background-color: red;
+  width: 5px;
+  height: 0;
+  /* o duoi hover co height: 100% nen o day phai de 0 */
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+}
+/* chinh thanh do do ben tay phai icon, them position: relative o tren */
+
+.slider__content .item:hover::after {
+  height: 100%;
+}
+
+.slick-dots li button:before {
+  color: gray;
+  font-size: 0.7rem;
+  /* cai nay trong file thu vien slick, tim trong f12 bai mau */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #e62b4a;
+  /* nhu tren */
+}
+
+.showcase {
+  width: 80%;
+  margin: 40px auto 0px;
+}
+
+.showcase__list {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* gird: 1fr = 1 cot, neu giong nhau thi ghi repeat */
+  /* grid-template di cung voi display: grid */
+  gap: 2rem;
+  /* cach deu cac icon ra */
+}
+
+.showcase__title {
+  text-align: center;
+}
+
+.showcase__portfolio {
+  font-size: 14px;
+  font-weight: 400;
+  color: #888888;
+}
+
+.showcase__title-main {
+  font-size: 50px;
+  color: black;
+  font-weight: 400;
+}
+
+.showcase__title-des {
+  font-size: 16px;
+  color: #888888;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.showcase__item {
+  height: 408px;
+  position: relative;
+}
+
+.showcase__item img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+  /* mau icon trang den */
+  object-fit: cover;
+  /* de chinh hinh width va height la 100% */
+}
+
+.showcase__overlay {
+  position: absolute;
+  /* ket hop voi position: relative o showcase__item */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0%;
+  /* tao background mau hong tren hinh work showcase */
+  transition: 0.5;
+}
+
+.showcase__zoom {
+  /* lam hinh knh lup' ben goc phai hinh */
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: black;
+  display: flex;
+  /* canh giua */
+  justify-content: center;
+  /* canh theo chieu ngang */
+  align-items: center;
+  /* canh theo chieu doc */
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.5s;
+}
+
+.showcase__overlay-bot {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  opacity: 0;
+  transition: all 0.5s;
+  transform: translateY(100%);
+}
+
+.showcase__item:hover .showcase__overlay {
+  background-color: rgba(230, 43, 74, 0.6);
+}
+
+.showcase__item:hover .showcase__overlay-bot {
+  opacity: 1;
+  transform: translate(0%);
+}
+/* 1 giay hieu ung hover hien len */
+
+.showcase__item:hover .showcase__zoom {
+  opacity: 1;
+  /* 1 giay hieu ung hover hien len */
+  transform: translate(0%);
+}
+
+/* count */
+.couter {
+  background-color: black;
+  padding: 30px 0px;
+}
+
+.couter__wrapper {
+  width: 80%;
+  margin: 0px auto;
+}
+
+.couter__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.couter__item span {
+  color: white;
+  font-size: 60px;
+  font-weight: 300;
+}
+
+.couter__item p {
+  color: #888888;
+  font-size: 20px;
+}
+
+/* experience */
+.experience {
+  color: white;
+  padding: 30px 0px;
+  background-image: url(../img/bussiness_img_1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.experience__wrapper {
+  width: 80%;
+  margin: 0px auto;
+}
+
+.experience__video {
+  margin-top: 25px;
+}
+
+.contact__content {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.contact__map {
+  width: 60%;
+}
+
+.contact__form {
+  width: 40%;
+}
+
+.contact__form form {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.contact__form form input,
+.contact__form form textarea {
+  padding: 0.6rem;
+  margin-bottom: 30px;
+}
+
+.contact__form form .button {
+  background-color: black;
+  color: #fff;
+}
+
+.contact__form form .button:hover {
+  background-color: #e62b4a;
+  transition: 0.5s;
+}
+
+.square {
+  background-color: #e62b4a;
+  width: 200px;
+  height: 200px;
+  animation-name: demoAnimaition;
+  animation-duration: 3s;
+  animation-iteration-count: 5;
+  position: relative;
+}
+
+@keyframes demoAnimaition {
+  0% {
+    background-color: #e62b4a;
+    top: 0;
+    left: 0;
+  }
+
+  25% {
+    background-color: aqua;
+    top: 0;
+    left: 200px;
+  }
+
+  50% {
+    background-color: blue;
+    top: 200px;
+    left: 200px;
+  }
+
+  75% {
+    background-color: brown;
+    top: 200px;
+    left: 0;
+  }
+
+  100% {
+    background-color: chartreuse;
+    top: 0;
+    left: 0;
+  }
+}
+
+.arrow__down i {
+  animation-name: arrow__down;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes arrow__down {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+
+.backtotop {
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  line-height: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+}
+
+.cd-top--is-visible { 
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-top--fade-out {
+  opacity: .5;
+}
